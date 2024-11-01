@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "멘티분들/조현성.md",
+                "file": "VamSur.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "조현성"
+              "title": "VamSur"
             }
           }
         ]
@@ -176,6 +176,7 @@
   },
   "active": "ab7457ebe7a9da99",
   "lastOpenFiles": [
+    "멘티분들/조현성.md",
     "멘티분들/정귀련.md",
     "멘티분들/윤현석.md",
     "멘티분들/안의성.md",
@@ -195,7 +196,6 @@
     "역할 분담/맵.md",
     "개발 해야할 기능/맵 파괴 및 재생성.md",
     "개발 해야할 기능",
-    "멘티분들/조현성.md",
     "무제 파일.canvas",
     "더미파일/Pasted image 20241028230009.png",
     "더미파일",
