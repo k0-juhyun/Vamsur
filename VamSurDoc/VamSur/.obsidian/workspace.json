@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "eb90698667da356f",
+    "type": "split",
+    "children": [
+      {
+        "id": "5fca7269bf01f077",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ab7457ebe7a9da99",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "VamSur.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "VamSur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5311785d201cbbb3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c33ce812a4f034a4",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8d1435a4effc4dd1",
+    "type": "split",
+    "children": [
+      {
+        "id": "dcc74bdcf0587488",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7bf09b74a187ca3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "bcbf62393f69015a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "e51d3041d849d8d7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 212.5
+  },
+  "right": {
+    "id": "ee67c78fddda6bfd",
+    "type": "split",
+    "children": [
+      {
+        "id": "78776461f2a45e7e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6bfd0f27ed1bcf46",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "백링크"
+            }
+          },
+          {
+            "id": "cfeacf85be24c7d6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "나가는 링크"
+            }
+          },
+          {
+            "id": "911ae8d5a1885427",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6ab824f9382b9412",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "ab7457ebe7a9da99",
+  "lastOpenFiles": [
+    "멘티분들/조현성.md",
+    "멘티분들/정귀련.md",
+    "멘티분들/윤현석.md",
+    "멘티분들/안의성.md",
+    "멘티분들/손예진.md",
+    "VamSur.md",
+    "역할 분담/플레이어.md",
+    "개발 해야할 기능/몬스터 스폰 기능.md",
+    "개발 해야할 기능/몬스터 별 공격.md",
+    "개발 해야할 기능/몬스터 스테이트 머신.md",
+    "역할 분담/몬스터.md",
+    "개발 해야할 기능/레벨 업.md",
+    "개발 해야할 기능/무기 업그레이드.md",
+    "개발 해야할 기능/플레이어 스킬.md",
+    "개발 해야할 기능/체력 상호 작용.md",
+    "개발 해야할 기능/플레이어 슈팅.md",
+    "개발 해야할 기능/플레이어 이동.md",
+    "역할 분담/맵.md",
+    "개발 해야할 기능/맵 파괴 및 재생성.md",
+    "개발 해야할 기능",
+    "무제 파일.canvas",
+    "더미파일/Pasted image 20241028230009.png",
+    "더미파일",
+    "더미파일/Pasted image 20241028230140.png",
+    "더미파일/Pasted image 20241028230117.png",
+    "더미파일/Pasted image 20241028230034.png",
+    "자료/자료.md",
+    "자료",
+    "역할 분담",
+    "멘티분들"
+  ]
+}
