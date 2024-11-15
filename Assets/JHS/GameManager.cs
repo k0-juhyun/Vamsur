@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
     public float gameTime;
     public float maxGameTime = 5 * 60f;
     [Header("# Player Info")]
-    public int health;
-    public int maxHealth;
-    public int level;
+    public int health = 0;
+    public int maxHealth = 100;
+    public int level = 0;
     public int kill;
-    public int exp;
+    public int exp = 0;
     public int[] nextExp = { 10, 30, 60, 100, 150, 210, 280, 360, 450, 600 };
     //[Header("# Game Object")]
     //public Player player;
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         health = maxHealth;
     }
+
     private void Update()
     {
         gameTime += Time.deltaTime;
@@ -33,7 +34,9 @@ public class GameManager : MonoBehaviour
         {
             gameTime = maxGameTime;
         }
+
     }
+
     public void GetExp()
     {
         exp++;
@@ -41,6 +44,8 @@ public class GameManager : MonoBehaviour
         {
             level++;
             exp = 0;
+            // 이벤트추가 버튼 띄우게 하기~
         }
     }
+
 }
