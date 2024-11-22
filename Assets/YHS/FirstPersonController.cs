@@ -29,7 +29,7 @@ public class FirstPersonController : MonoBehaviour
     }
 
     void Update()
-    {
+    {    
         // F 키로 사다리 타기 가능 여부 설정
         if (Input.GetKeyDown(KeyCode.F) && isOnLadder)
         {
@@ -61,6 +61,8 @@ public class FirstPersonController : MonoBehaviour
 
         // 경사면 감지 및 이동
         CheckSlope();
+
+            
     }
 
     void MovePlayer()
