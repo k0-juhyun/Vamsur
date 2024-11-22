@@ -13,7 +13,7 @@ public class MonsterFSM     //MonsterBaseState의 현재 상태, 상태 변경 시 호출 될
             return;
 
         if (_curState != null)
-            _curState.OnMonsterStateEnter();
+            _curState.OnMonsterStateExit();
 
         _curState = nextState;
         _curState.OnMonsterStateEnter();

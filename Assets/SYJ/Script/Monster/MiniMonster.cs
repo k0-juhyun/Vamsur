@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MiniMonster : MonsterState
 {
+    public int MonsterHP { get; set; }
+
     private enum MonsterST
     {
         Idle,
@@ -12,26 +14,50 @@ public class MiniMonster : MonsterState
         Hit,
         Death
     }
-    private MonsterST _monsterST;
+    private MonsterST _monsterSt;
     private MonsterFSM _monsterFSM;
 
     // Start is called before the first frame update
     void Start()
     {
-        _monsterST = MonsterST.Idle;
+        _monsterSt = MonsterST.Idle;
         _monsterFSM = new MonsterFSM(new MonsterIdleState(this));
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (_monsterST)
+        switch (_monsterSt)
         {
             case MonsterST.Idle:
+                if (Input.GetKeyDown(KeyCode.W))        //юс╫ц
+                {
+                    ChangeState(MonsterST.Patrol);
+                }
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    ChangeState(MonsterST.Attack);
+                }
                 break;
             case MonsterST.Patrol:
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    ChangeState(MonsterST.Attack);
+                }
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    ChangeState(MonsterST.Idle);
+                }
                 break;
             case MonsterST.Attack:
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    ChangeState(MonsterST.Patrol);
+                }
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    ChangeState(MonsterST.Idle);
+                }
                 break;
             case MonsterST.Hit:
                 break;
@@ -44,9 +70,9 @@ public class MiniMonster : MonsterState
 
     private void ChangeState(MonsterST nextState)
     {
-        _monsterST = nextState;
+        _monsterSt = nextState;
 
-        switch (_monsterST)
+        switch (_monsterSt)
         {
             case MonsterST.Idle:
                 _monsterFSM.ChangeState(new MonsterIdleState(this));
