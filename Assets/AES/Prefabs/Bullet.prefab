@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7600593037835666031}
   - component: {fileID: 3812255889895448000}
   - component: {fileID: 2487428907175010988}
+  - component: {fileID: -8172801428157356550}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -27,8 +28,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8855877472726784528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0, z: 0.00000042892407, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -110,7 +111,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84202376dce450d47bde53ac75d30fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputVec: {x: 0, y: 0, z: 0}
-  speed: 0
   damage: 0
   per: 0
+--- !u!114 &-8172801428157356550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8855877472726784528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a5bef4bf58fcf4282f0a657521da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 3
+  rovSpeed: 10
+  destructionDelay: 100
+  Player: {fileID: 3987146929991848078, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
