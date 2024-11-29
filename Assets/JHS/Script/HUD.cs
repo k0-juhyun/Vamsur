@@ -20,14 +20,14 @@ public class HUD : MonoBehaviour
         {
             case InfoType.Exp:
                 int curEXP = GameManager.Instance.exp;
-                int maxEXP = GameManager.Instance.nextExp[GameManager.Instance.level];
+                int maxEXP = GameManager.Instance.nextExp[Mathf.Min(GameManager.Instance.level, GameManager.Instance.nextExp.Length - 1)];
                 mySlider.value = curEXP/maxEXP;
                 break;
             case InfoType.Level:
                 myText.text = string.Format("Lv.{0:F0}", GameManager.Instance.level);
                 break;
             case InfoType.Kill:
-                myText.text = string.Format("Lv.{0:F0}", GameManager.Instance.kill);
+                myText.text = string.Format("Kill : {0:F0}", GameManager.Instance.kill);
                 break;
             case InfoType.Time:
                 float remainTime = GameManager.Instance.maxGameTime - GameManager.Instance.gameTime;
