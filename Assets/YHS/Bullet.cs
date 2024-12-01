@@ -28,18 +28,20 @@ public class Bullet : MonoBehaviour
     }
 
     // 총알이 다른 오브젝트와 충돌했을 때
-     private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
+{
+    if (collision.gameObject.CompareTag("Monster")) // "Monster" 태그 확인
     {
-        // 충돌한 객체에서 HealthBarController를 찾음
         HealthBarController healthBarController = collision.gameObject.GetComponent<HealthBarController>();
         if (healthBarController != null)
         {
             healthBarController.TakeDamage(damage); // 데미지 적용
         }
-
-        // 총알을 삭제
-        Destroy(gameObject);
     }
+
+    Destroy(gameObject); // 총알 삭제
+}
+
 }
 
 

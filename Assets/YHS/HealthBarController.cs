@@ -16,11 +16,6 @@ public class HealthBarController : MonoBehaviour
         healthBarSlider.value = maxHealth;
     }
 
-    void Update()
-    {
-        
-    }
-
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
@@ -41,7 +36,18 @@ public class HealthBarController : MonoBehaviour
         Debug.Log("Player has died!");
         gameObject.SetActive(false); // 플레이어 비활성화
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Monster"))
+        {
+            Debug.Log("Player collided with a Monster!"); // 디버그 메시지
+            float damage = 10f; // 감소할 체력
+            TakeDamage(damage);
+        }
+    }
 }
+
 
 
 

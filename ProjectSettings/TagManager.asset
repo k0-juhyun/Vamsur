@@ -9,6 +9,7 @@ TagManager:
   - Ladder-bottom
   - Ladder-air
   - Ladder
+  - Monster
   layers:
   - Default
   - TransparentFX
