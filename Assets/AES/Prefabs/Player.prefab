@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3297544958908316738}
   - component: {fileID: 3212869892364553908}
   - component: {fileID: -5100421317847675890}
-  - component: {fileID: 4528905925080390528}
   - component: {fileID: -7613978013497377394}
+  - component: {fileID: -1545853941429384961}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -117,22 +117,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &4528905925080390528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3987146929991848078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b0c6fc208ccc314cab8f46e5657c4d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 3
-  lookSensitivity: 0
-  cameraRotationLimit: 0
-  theCamera: {fileID: 0}
 --- !u!114 &-7613978013497377394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +129,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0c6fc208ccc314cab8f46e5657c4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  count: 0
   Speed: 10
   lookSensitivity: 10
   cameraRotationLimit: 45
   theCamera: {fileID: 0}
+--- !u!114 &-1545853941429384961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3987146929991848078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a5bef4bf58fcf4282f0a657521da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 6
+  radius: 5
+  rovSpeed: 30
+  destructionDelay: 5
+  Player: {fileID: 3987146929991848078}
+  bulletPrefab: {fileID: 8855877472726784528, guid: 9fd1826993c79494b894830f32a32214, type: 3}

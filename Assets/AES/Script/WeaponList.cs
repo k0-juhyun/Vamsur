@@ -7,14 +7,14 @@
 //    [SerializeField]
 //    private GameObject[] prefabs;
 
-//    List<GameObject> pools;
+//    private List<List<GameObject>> pools;
 
 //    void Awake()
 //    {
-//        pools = new List<GameObject>prefabs.Length;
+//        pools = new List<List<GameObject>>();
 
 
-//        for (int i = 0; i < pools.Length; i++)
+//        for (int i = 0; i < prefabs.Length; i++)
 //        {
 //            pools[i] = new List<GameObject>();
 //        }
@@ -38,6 +38,8 @@
 //            select = Instantiate(prefabs[i], transform);
 //            pools[i].Add(select);
 //        }
+
+//        return select;
 //    }
 
 //    //드래그 주석 ctrl + K + C

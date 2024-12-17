@@ -145,7 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba490b77d456bb74ba0bccc886ef2eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs: []
+  prefabs:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &235556564
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,36 +391,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7613978013497377394, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
-      propertyPath: theCamera
-      value: 
-      objectReference: {fileID: 235556565}
-    - target: {fileID: 3987146929991848078, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528905925080390528, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528905925080390528, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
-      propertyPath: count
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528905925080390528, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 8855877472726784528, guid: 9fd1826993c79494b894830f32a32214, type: 3}
-    - target: {fileID: 4528905925080390528, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
+    - target: {fileID: -7613978013497377394, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
       propertyPath: theCamera
       value: 
       objectReference: {fileID: 235556565}
-    - target: {fileID: 4528905925080390528, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
-      propertyPath: lookSensitivity
-      value: 10
+    - target: {fileID: -1545853941429384961, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
+      propertyPath: count
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4528905925080390528, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
-      propertyPath: cameraRotationLimit
-      value: 45
+    - target: {fileID: 3987146929991848078, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
+      propertyPath: m_Name
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7624630257439681123, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
       propertyPath: m_RootOrder
@@ -464,6 +450,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -7613978013497377394, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cac1219ca75d7c4f894c65e0e2d6faf, type: 3}
