@@ -8,8 +8,6 @@ public class MonsterPatrolState : MonsterBaseState
 
     public override void OnMonsterStateEnter()
     {
-        Debug.Log("Patrol");
-
         animator = _monsterState.GetComponent<Animator>();
 
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Patrol"))

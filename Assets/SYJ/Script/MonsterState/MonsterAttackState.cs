@@ -7,8 +7,6 @@ public class MonsterAttackState : MonsterBaseState
 
     public override void OnMonsterStateEnter()
     {
-        Debug.Log("Attack");
-
         animator = _monsterState.GetComponent<Animator>();
 
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))

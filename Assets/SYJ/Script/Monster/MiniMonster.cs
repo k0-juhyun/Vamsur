@@ -1,10 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MiniMonster : MonsterState
 {
-    public int MonsterHP { get; set; }
+    public float MonsterHP { get; set; }
+    public Vector3 monsterDistance;
+    public GameObject player;
+    public NavMeshAgent nmAgent;
+    public float monsterDamager;
 
     private enum MonsterST
     {
@@ -20,48 +24,74 @@ public class MiniMonster : MonsterState
     // Start is called before the first frame update
     void Start()
     {
-        _monsterSt = MonsterST.Idle;
+        _monsterSt = MonsterST.Patrol;
         _monsterFSM = new MonsterFSM(new MonsterIdleState(this));
+        nmAgent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
     void Update()
+    {
+        nmAgent.SetDestination(player.transform.position);
+        StartCoroutine(MonsterClash());
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            MonsterHitDamage(1);
+        }
+    }
+
+    public void MonsterHitDamage(float damage)
+    {
+        ChangeState(MonsterST.Hit);
+
+        MonsterHP -= damage;
+
+        if (MonsterHP < 0)
+        {
+            ChangeState(MonsterST.Death);
+        }
+    }
+
+    public float MonsterTakeDamage()
+    {
+        return monsterDamager;
+    }
+
+    private IEnumerator MonsterClash()
     {
         switch (_monsterSt)
         {
             case MonsterST.Idle:
-                if (Input.GetKeyDown(KeyCode.W))        //юс╫ц
-                {
-                    ChangeState(MonsterST.Patrol);
-                }
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    ChangeState(MonsterST.Attack);
-                }
+                yield return null;
                 break;
             case MonsterST.Patrol:
-                if (Input.GetKeyDown(KeyCode.A))
+                if (nmAgent.remainingDistance <= nmAgent.stoppingDistance)
                 {
                     ChangeState(MonsterST.Attack);
                 }
-                if (Input.GetKeyDown(KeyCode.S))
-                {
-                    ChangeState(MonsterST.Idle);
-                }
+                yield return null;
                 break;
             case MonsterST.Attack:
-                if (Input.GetKeyDown(KeyCode.W))
+                if (nmAgent.remainingDistance > nmAgent.stoppingDistance)
                 {
                     ChangeState(MonsterST.Patrol);
                 }
-                if (Input.GetKeyDown(KeyCode.S))
-                {
-                    ChangeState(MonsterST.Idle);
-                }
+                yield return null;
                 break;
             case MonsterST.Hit:
+                if (nmAgent.remainingDistance > nmAgent.stoppingDistance)
+                {
+                    ChangeState(MonsterST.Patrol);
+                }
+                if (nmAgent.remainingDistance <= nmAgent.stoppingDistance)
+                {
+                    ChangeState(MonsterST.Attack);
+                }
+                yield return null;
                 break;
             case MonsterST.Death:
+                Destroy(gameObject);
+                yield return null;
                 break;
         }
 

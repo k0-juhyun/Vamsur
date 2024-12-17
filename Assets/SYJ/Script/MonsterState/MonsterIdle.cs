@@ -8,8 +8,6 @@ public class MonsterIdleState : MonsterBaseState
 
     public override void OnMonsterStateEnter()
     {
-        Debug.Log("Idle");
-
         animator = _monsterState.GetComponent<Animator>();
 
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
