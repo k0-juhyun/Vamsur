@@ -27,6 +27,7 @@ public class MiniMonster : MonsterState
         _monsterSt = MonsterST.Patrol;
         _monsterFSM = new MonsterFSM(new MonsterIdleState(this));
         nmAgent = GetComponent<NavMeshAgent>();
+        player = GameObject.FindWithTag("Player");
     }
 
     void Update()

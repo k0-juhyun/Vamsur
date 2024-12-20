@@ -655,6 +655,7 @@ GameObject:
   - component: {fileID: 4951641516566607512}
   - component: {fileID: 4951641516566607515}
   - component: {fileID: 4951641516566607514}
+  - component: {fileID: 356147839686135415}
   m_Layer: 0
   m_Name: CactusMonster
   m_TagString: Monster
@@ -712,6 +713,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01086b701c6d6914ab8d06fa9cb1dfe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterDistance: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  nmAgent: {fileID: 0}
+  monsterDamager: 0
+--- !u!195 &356147839686135415
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951641516566607591}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.41
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.24
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4951641516710571133
 GameObject:
   m_ObjectHideFlags: 0

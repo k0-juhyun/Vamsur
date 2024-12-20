@@ -32,11 +32,13 @@ public class Bullet : MonoBehaviour
 {
     if (collision.gameObject.CompareTag("Monster")) // "Monster" 태그 확인
     {
-        HealthBarController healthBarController = collision.gameObject.GetComponent<HealthBarController>();
-        if (healthBarController != null)
-        {
-            healthBarController.TakeDamage(damage); // 데미지 적용
-        }
+        //HealthBarController healthBarController = collision.gameObject.GetComponent<HealthBarController>();
+        //if (healthBarController != null)
+        //{
+        //    healthBarController.TakeDamage(damage); // 데미지 적용
+        //}
+        MiniMonster miniMonster = collision.gameObject.GetComponent<MiniMonster>();
+            miniMonster.MonsterHitDamage(10);
     }
 
     Destroy(gameObject); // 총알 삭제
